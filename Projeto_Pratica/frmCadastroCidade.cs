@@ -1,0 +1,189 @@
+﻿using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+
+namespace Projeto_Pratica
+{
+    public partial class frmCadastroCidade : Projeto_Pratica.frmCadastro
+    {
+        private cidade aCidade;
+        private Controller_cidade aController_cidade;
+        private frmConsultaEstado oFrmConsultaEstado;
+
+        public frmCadastroCidade() : base()
+        {
+            InitializeComponent();
+        }
+
+        public override void ConhecaObj(object obj, object ctrl)
+        {
+            aCidade = (cidade)obj;
+            aController_cidade = (Controller_cidade)ctrl;
+        }
+
+        public void setConsultaEstado(frmConsultaEstado consulta)
+        {
+            oFrmConsultaEstado = consulta;
+        }
+
+        public override void Salvar()
+        {
+            if (string.IsNullOrWhiteSpace(txtNome.Text) ||
+                aCidade.OEstado == null || aCidade.OEstado.Id == 0
+                )
+            {
+                txtNome.Focus();
+                btnPesquisarEstado.Focus();
+
+                MessageBox.Show("Preencha todos os campos obrigatórios para salvar.");
+                return;
+            }
+
+            aCidade.Id = Convert.ToInt32(txtCodigo.Text);
+            aCidade.Nome = txtNome.Text;
+            aCidade.Ativo = checkBoxAtivo.Checked;
+
+            try
+            {
+                if (btnSave.Text == "Excluir")
+                {
+                    DialogResult resp = MessageBox.Show("Deseja realmente excluir?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (resp == DialogResult.Yes)
+                    {
+                        aController_cidade.Excluir(aCidade);
+                        MessageBox.Show("A cidade \"" + aCidade.Nome + "\" foi excluída com sucesso.");
+                        Sair();
+                    }
+                }
+                else if (btnSave.Text == "Alterar")
+                {
+                    aController_cidade.Salvar(aCidade);
+                    MessageBox.Show("A cidade \"" + aCidade.Nome + "\" foi alterada com sucesso.");
+                }
+                else
+                {
+                    aController_cidade.Salvar(aCidade);
+                    MessageBox.Show("A cidade \"" + aCidade.Nome + "\" foi salva com o código " + aCidade.Id + ".");
+                }
+
+                base.Salvar();
+            }
+            catch (MySqlException ex)
+            {
+                switch (ex.Number)
+                {
+                    case 1062: // Entrada duplicada
+                        MessageBox.Show(
+                            "Não foi possível salvar o item.\n\nJá existe um item salvo com estes dados.",
+                            "Erro: Item duplicado",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error
+                        );
+                        break;
+
+                    case 1451: //  Entrada interligada
+                        MessageBox.Show(
+                            "Não foi possível excluir o item.\n\nEle está interligado a outro item existente.",
+                            "Erro: Item em uso",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error
+                        );
+                        break;
+
+                    default: // Outros erros de banco de dados
+                        MessageBox.Show(
+                            "Não foi possível concluir a operação. Verifique os dados e tente novamente.\n\nDetalhes técnicos: " + ex.Message,
+                            "Erro no Banco de Dados",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error
+                        );
+                        break;
+                }
+                return;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro inesperado: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+
+        public override void Limpartxt()
+        {
+            base.Limpartxt();
+
+            txtNome.Clear();
+            txtCodEstado.Clear();
+            txtEstado.Clear();
+            aCidade.OEstado = new estado();
+        }
+
+        public override void Carregatxt()
+        {
+            base.Carregatxt();
+
+            txtCodigo.Text = aCidade.Id.ToString();
+            txtNome.Text = aCidade.Nome;
+            txtCodEstado.Text = aCidade.OEstado.Id.ToString();
+            txtEstado.Text = aCidade.OEstado.Nome;
+            checkBoxAtivo.Checked = aCidade.Ativo;
+            lblDataCadastroData.Text = aCidade.DataCadastro.ToShortDateString();
+            lblDataUltimaEdicaoData.Text = aCidade.DataUltimaEdicao?.ToShortDateString() ?? " ";
+        }
+
+        public override void Bloqueiatxt()
+        {
+            base.Bloqueiatxt();
+
+            txtNome.Enabled = false;
+            txtCodEstado.Enabled = false;
+            txtEstado.Enabled = false;
+            btnPesquisarEstado.Enabled = false;
+        }
+
+        public override void Desbloqueiatxt()
+        {
+            base.Desbloqueiatxt();
+
+            txtNome.Enabled = true;
+            txtCodEstado.Enabled = true;
+            txtEstado.Enabled = true;
+            btnPesquisarEstado.Enabled = true;
+        }
+        public override void CamposRestricoes()
+        {
+            base.CamposRestricoes();
+
+            txtNome.MaxLength = 58;
+        }
+
+        private void btnPesquisarEstado_Click_1(object sender, EventArgs e)
+        {
+            if (oFrmConsultaEstado == null)
+                oFrmConsultaEstado = new frmConsultaEstado();
+
+            estado oEstado = new estado();
+            Controller_estado controller = new Controller_estado();
+            oFrmConsultaEstado.ConhecaObj(oEstado, controller);
+            oFrmConsultaEstado.ShowDialog();
+
+            if (oEstado.Id != 0)
+            {
+                aCidade.OEstado = oEstado;
+                txtCodEstado.Text = oEstado.Id.ToString();
+                txtEstado.Text = oEstado.Nome;
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            Salvar();
+        }
+    }
+}
