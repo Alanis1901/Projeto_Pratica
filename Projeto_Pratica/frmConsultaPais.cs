@@ -164,5 +164,10 @@ namespace Projeto_Pratica
         {
 
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            Pesquisar();
+        }
     }
 }

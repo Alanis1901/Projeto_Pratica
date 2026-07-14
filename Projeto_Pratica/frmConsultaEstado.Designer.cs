@@ -39,6 +39,8 @@
             this.clmNome,
             this.clmPais,
             this.clmAtivo});
+            this.listV.DoubleClick += new System.EventHandler(this.listV_SelectedIndexChanged);
+            this.listV.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.frmConsultaEstado_MouseDoubleClick);
             // 
             // clmNome
             // 
@@ -58,7 +60,7 @@
             // frmConsultaEstado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(734, 516);
+            this.ClientSize = new System.Drawing.Size(1344, 689);
             this.Name = "frmConsultaEstado";
             this.Text = "Consulta de Estado";
             this.ResumeLayout(false);

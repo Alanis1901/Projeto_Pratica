@@ -44,6 +44,18 @@
             this.lblDataAdmissao = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
+            // btnPesquisarCidade
+            // 
+            this.btnPesquisarCidade.Click += new System.EventHandler(this.btnPesquisarCidade_Click_1);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.ShortcutsEnabled = false;
+            // 
             // txtSalario
             // 
             this.txtSalario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -191,7 +203,7 @@
             // frmCadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(1093, 540);
+            this.ClientSize = new System.Drawing.Size(1344, 689);
             this.Controls.Add(this.dtpDataDemissao);
             this.Controls.Add(this.lblDataDemissao);
             this.Controls.Add(this.dtpDataAdmissao);
@@ -208,6 +220,11 @@
             this.Controls.Add(this.lblMatricula);
             this.Name = "frmCadastroFuncionario";
             this.Text = "Cadastro de Funcionário";
+            this.DoubleClick += new System.EventHandler(this.btnPesquisarCidade_Click);
+            this.Controls.SetChildIndex(this.checkBoxAtivo, 0);
+            this.Controls.SetChildIndex(this.lblDataCadastroData, 0);
+            this.Controls.SetChildIndex(this.lblDataUltimaEdicaoData, 0);
+            this.Controls.SetChildIndex(this.lblUltimoUsuarioQueEditouNome, 0);
             this.Controls.SetChildIndex(this.txtCodigo, 0);
             this.Controls.SetChildIndex(this.btnSair, 0);
             this.Controls.SetChildIndex(this.lblDataCadastro, 0);

@@ -38,6 +38,7 @@ namespace Projeto_Pratica
 
         public override void Salvar()
         {
+            MessageBox.Show("Entrou em Salvar()");
             try
             {
                 if (btnSave.Text == "Excluir")
@@ -54,6 +55,7 @@ namespace Projeto_Pratica
                 else
                 {
                     if (!ValidacaoCampos())
+
                         return;
 
                     if (
@@ -398,6 +400,40 @@ namespace Projeto_Pratica
 
             txtCargaHoraria.KeyPress -= ApenasNumeros;
             txtCargaHoraria.KeyPress += ApenasNumeros;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            Salvar();
+        }
+
+        private void btnPesquisarCidade_Click_1(object sender, EventArgs e)
+        {
+            {
+                if (oFrmConsultaCidade == null)
+                    oFrmConsultaCidade = new frmConsultaCidade();
+
+                cidade cidade = new cidade();
+                Controller_cidade controller = new Controller_cidade();
+                oFrmConsultaCidade.ConhecaObj(cidade, controller);
+                oFrmConsultaCidade.ShowDialog();
+
+                if (cidade.Id != 0)
+                {
+                    controller.CarregaObj(cidade);
+
+                    oFuncionario.ACidade = cidade;
+                    txtCodCidade.Text = cidade.Id.ToString();
+                    txtCidade.Text = cidade.Nome;
+                    txtEstado.Text = cidade.OEstado.Nome;
+                    txtPais.Text = cidade.OEstado.OPais.Nome;
+
+                    isEstrangeiro = cidade.OEstado.OPais.Nome.Trim().ToUpper() != "BRASIL";
+
+                    lblCep.Text = isEstrangeiro ? "CEP" : "CEP *";
+                    lblCpf.Text = isEstrangeiro ? "CPF" : "CPF *";
+                }
+            }
         }
     }
 }

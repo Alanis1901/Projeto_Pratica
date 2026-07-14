@@ -227,5 +227,15 @@ namespace Projeto_Pratica
             oFuncionario.Id = 0;
             base.Sair();
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            Pesquisar();
+        }
+
+        private void bntLimparPesquisa_Click(object sender, EventArgs e)
+        {
+           LimparPesquisa();
+        }
     }
 }

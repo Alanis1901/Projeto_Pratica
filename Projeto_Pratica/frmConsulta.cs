@@ -89,12 +89,6 @@ namespace Projeto_Pratica
 
             Excluir();
         }
-
-        private void btnPesquisar_Click(object sender, EventArgs e)
-        {
-            Pesquisar();
-        }
-
         private void btnLimparPesquisa_Click(object sender, EventArgs e)
         {
             LimparPesquisa();
@@ -148,8 +142,7 @@ namespace Projeto_Pratica
 
         private void btnPesquisar_Click_1(object sender, EventArgs e)
         {
-            txtCodigo.Text = " ";
-            CarregaLV();
+            Pesquisar();
         }
 
         private void bntLimparPesquisa_Click(object sender, EventArgs e)
