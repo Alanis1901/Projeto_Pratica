@@ -59,7 +59,9 @@
             // frmConsultaPais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(1344, 689);
+            this.ClientSize = new System.Drawing.Size(727, 511);
+            this.MaximumSize = new System.Drawing.Size(0, 0);
+            this.MinimumSize = new System.Drawing.Size(0, 0);
             this.Name = "frmConsultaPais";
             this.Text = "Consulta de País";
             this.ResumeLayout(false);

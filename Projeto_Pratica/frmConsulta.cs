@@ -6,6 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
+//Os formulários de consulta permitem localizar registros já cadastrados.
+//Funcionalidades:
+
 namespace Projeto_Pratica
 {
     public partial class frmConsulta : Projeto_Pratica.frmBase

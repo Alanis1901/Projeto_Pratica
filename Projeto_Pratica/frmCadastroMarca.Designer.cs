@@ -32,6 +32,10 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
+            // txtCodigo
+            // 
+            this.txtCodigo.ShortcutsEnabled = false;
+            // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
@@ -55,11 +59,17 @@
             // frmCadastroMarca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(792, 444);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblNome);
+            this.MaximumSize = new System.Drawing.Size(0, 0);
+            this.MinimumSize = new System.Drawing.Size(0, 0);
             this.Name = "frmCadastroMarca";
             this.Text = "Cadastro de Marca";
+            this.Controls.SetChildIndex(this.checkBoxAtivo, 0);
+            this.Controls.SetChildIndex(this.lblDataCadastroData, 0);
+            this.Controls.SetChildIndex(this.lblDataUltimaEdicaoData, 0);
+            this.Controls.SetChildIndex(this.lblUltimoUsuarioQueEditouNome, 0);
             this.Controls.SetChildIndex(this.txtCodigo, 0);
             this.Controls.SetChildIndex(this.btnSair, 0);
             this.Controls.SetChildIndex(this.lblDataCadastro, 0);

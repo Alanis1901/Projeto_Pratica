@@ -174,7 +174,9 @@
             // frmConsultaFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(1344, 689);
+            this.ClientSize = new System.Drawing.Size(1398, 526);
+            this.MaximumSize = new System.Drawing.Size(0, 0);
+            this.MinimumSize = new System.Drawing.Size(0, 0);
             this.Name = "frmConsultaFuncionario";
             this.Text = "Consulta de Funcionário";
             this.ResumeLayout(false);

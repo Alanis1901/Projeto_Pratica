@@ -124,14 +124,17 @@
             // frmConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(1344, 689);
+            this.ClientSize = new System.Drawing.Size(729, 510);
             this.Controls.Add(this.btnIncluir);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.listV);
             this.Controls.Add(this.bntLimparPesquisa);
             this.Controls.Add(this.btnPesquisar);
+            this.MaximumSize = new System.Drawing.Size(0, 0);
+            this.MinimumSize = new System.Drawing.Size(0, 0);
             this.Name = "frmConsulta";
+            this.Text = "Consulta";
             this.Controls.SetChildIndex(this.btnSair, 0);
             this.Controls.SetChildIndex(this.txtCodigo, 0);
             this.Controls.SetChildIndex(this.btnPesquisar, 0);

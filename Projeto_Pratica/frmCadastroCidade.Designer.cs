@@ -36,9 +36,9 @@
             this.btnPesquisarEstado = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnSave
+            // txtCodigo
             // 
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.txtCodigo.ShortcutsEnabled = false;
             // 
             // lblNome
             // 
@@ -104,15 +104,21 @@
             // frmCadastroCidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(793, 444);
             this.Controls.Add(this.btnPesquisarEstado);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtCodEstado);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblNome);
+            this.MaximumSize = new System.Drawing.Size(0, 0);
+            this.MinimumSize = new System.Drawing.Size(0, 0);
             this.Name = "frmCadastroCidade";
             this.Text = "Cadastro de Cidade";
+            this.Controls.SetChildIndex(this.checkBoxAtivo, 0);
+            this.Controls.SetChildIndex(this.lblDataCadastroData, 0);
+            this.Controls.SetChildIndex(this.lblDataUltimaEdicaoData, 0);
+            this.Controls.SetChildIndex(this.lblUltimoUsuarioQueEditouNome, 0);
             this.Controls.SetChildIndex(this.txtCodigo, 0);
             this.Controls.SetChildIndex(this.btnSair, 0);
             this.Controls.SetChildIndex(this.lblDataCadastro, 0);

@@ -86,9 +86,22 @@
             // 
             this.lblCod.Location = new System.Drawing.Point(19, 78);
             // 
+            // lblDataCadastroData
+            // 
+            this.lblDataCadastroData.Location = new System.Drawing.Point(143, 471);
+            // 
+            // lblDataUltimaEdicaoData
+            // 
+            this.lblDataUltimaEdicaoData.Location = new System.Drawing.Point(154, 492);
+            // 
+            // lblUltimoUsuarioQueEditouNome
+            // 
+            this.lblUltimoUsuarioQueEditouNome.Location = new System.Drawing.Point(159, 515);
+            // 
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(19, 95);
+            this.txtCodigo.ShortcutsEnabled = false;
             // 
             // btnSair
             // 
@@ -453,7 +466,7 @@
             // frmCadastroPessoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(1093, 540);
+            this.ClientSize = new System.Drawing.Size(1088, 535);
             this.Controls.Add(this.dtpDataNascimentoCriacao);
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.lblTelefone);
@@ -490,8 +503,14 @@
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.comboBoxTipo);
             this.Controls.Add(this.lblTipo);
+            this.MaximumSize = new System.Drawing.Size(0, 0);
+            this.MinimumSize = new System.Drawing.Size(0, 0);
             this.Name = "frmCadastroPessoa";
             this.Text = "Cadastro de Pessoa";
+            this.Controls.SetChildIndex(this.checkBoxAtivo, 0);
+            this.Controls.SetChildIndex(this.lblDataCadastroData, 0);
+            this.Controls.SetChildIndex(this.lblDataUltimaEdicaoData, 0);
+            this.Controls.SetChildIndex(this.lblUltimoUsuarioQueEditouNome, 0);
             this.Controls.SetChildIndex(this.txtCodigo, 0);
             this.Controls.SetChildIndex(this.btnSair, 0);
             this.Controls.SetChildIndex(this.lblDataCadastro, 0);

@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
+//Os formulários de cadastro são responsáveis pelas operações de manutenção dos dados.
+
 namespace Projeto_Pratica
 {
     public partial class frmCadastro : Projeto_Pratica.frmBase

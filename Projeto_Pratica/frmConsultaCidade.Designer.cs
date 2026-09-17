@@ -43,6 +43,22 @@
             this.listV.DoubleClick += new System.EventHandler(this.listV_SelectedIndexChanged);
             this.listV.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listV_MouseDoubleClick);
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(546, 471);
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Location = new System.Drawing.Point(460, 471);
+            // 
+            // btnIncluir
+            // 
+            this.btnIncluir.Location = new System.Drawing.Point(374, 471);
+            // 
+            // btnSair
+            // 
+            this.btnSair.Location = new System.Drawing.Point(632, 471);
+            // 
             // clmNome
             // 
             this.clmNome.Text = "Cidade";
@@ -61,7 +77,9 @@
             // frmConsultaCidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(1344, 689);
+            this.ClientSize = new System.Drawing.Size(729, 511);
+            this.MaximumSize = new System.Drawing.Size(0, 0);
+            this.MinimumSize = new System.Drawing.Size(0, 0);
             this.Name = "frmConsultaCidade";
             this.Text = "Consulta de Cidade";
             this.ResumeLayout(false);

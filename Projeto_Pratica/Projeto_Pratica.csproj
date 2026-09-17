@@ -96,20 +96,52 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Banco.cs" />
+    <Compile Include="categoria.cs" />
     <Compile Include="cidade.cs" />
+    <Compile Include="cliente.cs" />
+    <Compile Include="compra.cs" />
+    <Compile Include="condicaoPagamento.cs" />
+    <Compile Include="contasAPagar.cs" />
+    <Compile Include="contasAReceber.cs" />
     <Compile Include="Controller.cs" />
+    <Compile Include="Controller_categoria.cs" />
     <Compile Include="Controller_cidade.cs" />
+    <Compile Include="Controller_cliente.cs" />
+    <Compile Include="Controller_compra.cs" />
+    <Compile Include="Controller_condicaoPagamento.cs" />
+    <Compile Include="Controller_contasAPagar.cs" />
+    <Compile Include="Controller_contasAReceber.cs" />
     <Compile Include="Controller_estado.cs" />
+    <Compile Include="Controller_formaPagamento.cs" />
+    <Compile Include="Controller_fornecedor.cs" />
     <Compile Include="Controller_funcionario.cs" />
     <Compile Include="Controller_marca.cs" />
     <Compile Include="Controller_pais.cs" />
+    <Compile Include="Controller_produto.cs" />
+    <Compile Include="Controller_produto_fornecedor.cs" />
+    <Compile Include="Controller_unidade_medida.cs" />
+    <Compile Include="Controller_venda.cs" />
     <Compile Include="Dao.cs" />
+    <Compile Include="Dao_categoria.cs" />
+    <Compile Include="Dao_cliente.cs" />
+    <Compile Include="Dao_compra.cs" />
+    <Compile Include="Dao_condicaoPagamento.cs" />
+    <Compile Include="Dao_contasAPagar.cs" />
+    <Compile Include="Dao_contasAReceber.cs" />
+    <Compile Include="Dao_formaPagamento.cs" />
+    <Compile Include="Dao_fornecedor.cs" />
     <Compile Include="Dao_funcionario.cs" />
     <Compile Include="Dao_cidade.cs" />
     <Compile Include="Dao_estado.cs" />
     <Compile Include="Dao_marca.cs" />
     <Compile Include="Dao_pais.cs" />
+    <Compile Include="Dao_produto.cs" />
+    <Compile Include="Dao_produto_fornecedor.cs" />
+    <Compile Include="Dao_unidade_medida.cs" />
+    <Compile Include="Dao_venda.cs" />
     <Compile Include="estado.cs" />
+    <Compile Include="formaPagamento.cs" />
+    <Compile Include="fornecedor.cs" />
     <Compile Include="frmBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,17 +154,65 @@
     <Compile Include="frmCadastro.Designer.cs">
       <DependentUpon>frmCadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCadastroCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroCategoria.Designer.cs">
+      <DependentUpon>frmCadastroCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCadastroCidade.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCadastroCidade.Designer.cs">
       <DependentUpon>frmCadastroCidade.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCadastroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroCliente.Designer.cs">
+      <DependentUpon>frmCadastroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastroCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroCompra.Designer.cs">
+      <DependentUpon>frmCadastroCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastroCondicaoPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroCondicaoPagamento.Designer.cs">
+      <DependentUpon>frmCadastroCondicaoPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastroContasAPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroContasAPagar.Designer.cs">
+      <DependentUpon>frmCadastroContasAPagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastroContasAReceber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroContasAReceber.Designer.cs">
+      <DependentUpon>frmCadastroContasAReceber.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCadastroEstado.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCadastroEstado.Designer.cs">
       <DependentUpon>frmCadastroEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastroFormaPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroFormaPagamento.Designer.cs">
+      <DependentUpon>frmCadastroFormaPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastroFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroFornecedor.Designer.cs">
+      <DependentUpon>frmCadastroFornecedor.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCadastroFuncionario.cs">
       <SubType>Form</SubType>
@@ -158,11 +238,35 @@
     <Compile Include="frmCadastroPessoa.Designer.cs">
       <DependentUpon>frmCadastroPessoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCadastroProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroProduto.Designer.cs">
+      <DependentUpon>frmCadastroProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastroUnidade_medida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroUnidade_medida.Designer.cs">
+      <DependentUpon>frmCadastroUnidade_medida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastroVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroVenda.Designer.cs">
+      <DependentUpon>frmCadastroVenda.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmConsulta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmConsulta.Designer.cs">
       <DependentUpon>frmConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaCategoria.Designer.cs">
+      <DependentUpon>frmConsultaCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="frmConsultaCidade.cs">
       <SubType>Form</SubType>
@@ -170,11 +274,53 @@
     <Compile Include="frmConsultaCidade.Designer.cs">
       <DependentUpon>frmConsultaCidade.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsultaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaCliente.Designer.cs">
+      <DependentUpon>frmConsultaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaCompra.Designer.cs">
+      <DependentUpon>frmConsultaCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaCondicaoPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaCondicaoPagamento.Designer.cs">
+      <DependentUpon>frmConsultaCondicaoPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaContasAPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaContasAPagar.Designer.cs">
+      <DependentUpon>frmConsultaContasAPagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaContasAReceber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaContasAReceber.Designer.cs">
+      <DependentUpon>frmConsultaContasAReceber.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmConsultaEstado.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmConsultaEstado.Designer.cs">
       <DependentUpon>frmConsultaEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaFormaPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaFormaPagamento.Designer.cs">
+      <DependentUpon>frmConsultaFormaPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaFornecedor.Designer.cs">
+      <DependentUpon>frmConsultaFornecedor.cs</DependentUpon>
     </Compile>
     <Compile Include="frmConsultaFuncionario.cs">
       <SubType>Form</SubType>
@@ -194,6 +340,24 @@
     <Compile Include="frmConsultaPais.Designer.cs">
       <DependentUpon>frmConsultaPais.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsultaProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaProduto.Designer.cs">
+      <DependentUpon>frmConsultaProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaUnidade_medida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaUnidade_medida.Designer.cs">
+      <DependentUpon>frmConsultaUnidade_medida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaVenda.Designer.cs">
+      <DependentUpon>frmConsultaVenda.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,23 +366,56 @@
     </Compile>
     <Compile Include="funcionario.cs" />
     <Compile Include="Interfaces.cs" />
+    <Compile Include="itemCompra.cs" />
+    <Compile Include="itemVenda.cs" />
     <Compile Include="marca.cs" />
     <Compile Include="pai.cs" />
     <Compile Include="pais.cs" />
+    <Compile Include="parcelaCondicaoPagamento.cs" />
     <Compile Include="pessoa.cs" />
+    <Compile Include="produto.cs" />
+    <Compile Include="produto_fornecedor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="unidade_medida.cs" />
+    <Compile Include="validaCNPJ.cs" />
+    <Compile Include="validaCPF.cs" />
+    <Compile Include="venda.cs" />
     <EmbeddedResource Include="frmBase.resx">
       <DependentUpon>frmBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadastro.resx">
       <DependentUpon>frmCadastro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroCategoria.resx">
+      <DependentUpon>frmCadastroCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCadastroCidade.resx">
       <DependentUpon>frmCadastroCidade.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroCliente.resx">
+      <DependentUpon>frmCadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroCompra.resx">
+      <DependentUpon>frmCadastroCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroCondicaoPagamento.resx">
+      <DependentUpon>frmCadastroCondicaoPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroContasAPagar.resx">
+      <DependentUpon>frmCadastroContasAPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroContasAReceber.resx">
+      <DependentUpon>frmCadastroContasAReceber.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCadastroEstado.resx">
       <DependentUpon>frmCadastroEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroFormaPagamento.resx">
+      <DependentUpon>frmCadastroFormaPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroFornecedor.resx">
+      <DependentUpon>frmCadastroFornecedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadastroFuncionario.resx">
       <DependentUpon>frmCadastroFuncionario.cs</DependentUpon>
@@ -232,14 +429,47 @@
     <EmbeddedResource Include="frmCadastroPessoa.resx">
       <DependentUpon>frmCadastroPessoa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroProduto.resx">
+      <DependentUpon>frmCadastroProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroUnidade_medida.resx">
+      <DependentUpon>frmCadastroUnidade_medida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroVenda.resx">
+      <DependentUpon>frmCadastroVenda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmConsulta.resx">
       <DependentUpon>frmConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaCategoria.resx">
+      <DependentUpon>frmConsultaCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmConsultaCidade.resx">
       <DependentUpon>frmConsultaCidade.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaCliente.resx">
+      <DependentUpon>frmConsultaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaCompra.resx">
+      <DependentUpon>frmConsultaCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaCondicaoPagamento.resx">
+      <DependentUpon>frmConsultaCondicaoPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaContasAPagar.resx">
+      <DependentUpon>frmConsultaContasAPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaContasAReceber.resx">
+      <DependentUpon>frmConsultaContasAReceber.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmConsultaEstado.resx">
       <DependentUpon>frmConsultaEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaFormaPagamento.resx">
+      <DependentUpon>frmConsultaFormaPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaFornecedor.resx">
+      <DependentUpon>frmConsultaFornecedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmConsultaFuncionario.resx">
       <DependentUpon>frmConsultaFuncionario.cs</DependentUpon>
@@ -249,6 +479,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmConsultaPais.resx">
       <DependentUpon>frmConsultaPais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaProduto.resx">
+      <DependentUpon>frmConsultaProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaUnidade_medida.resx">
+      <DependentUpon>frmConsultaUnidade_medida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaVenda.resx">
+      <DependentUpon>frmConsultaVenda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>

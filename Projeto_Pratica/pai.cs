@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Foi criada uma classe base chamada 'pai', utilizada para evitar repetição de código
+
 namespace Projeto_Pratica
 {
     internal class pai

@@ -53,7 +53,9 @@
             // frmConsultaMarca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(1344, 689);
+            this.ClientSize = new System.Drawing.Size(726, 509);
+            this.MaximumSize = new System.Drawing.Size(0, 0);
+            this.MinimumSize = new System.Drawing.Size(0, 0);
             this.Name = "frmConsultaMarca";
             this.Text = "Consulta de Marca";
             this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.frmConsultaMarca_MouseDoubleClick);

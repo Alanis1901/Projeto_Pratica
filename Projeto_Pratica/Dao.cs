@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Os DAOs são responsáveis pela comunicação direta com o banco de dados.
+//Toda operação no banco passa pelos DAOs.
+
 namespace Projeto_Pratica
 {
 

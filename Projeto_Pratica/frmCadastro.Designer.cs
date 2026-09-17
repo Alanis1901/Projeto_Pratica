@@ -130,7 +130,7 @@
             // frmCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(793, 444);
             this.Controls.Add(this.lblUltimoUsuarioQueEditouNome);
             this.Controls.Add(this.lblDataUltimaEdicaoData);
             this.Controls.Add(this.lblDataCadastroData);
@@ -140,6 +140,8 @@
             this.Controls.Add(this.lblUltimoUsuarioQueEditou);
             this.Controls.Add(this.lblDataUltimaEdicao);
             this.Controls.Add(this.lblDataCadastro);
+            this.MaximumSize = new System.Drawing.Size(0, 0);
+            this.MinimumSize = new System.Drawing.Size(0, 0);
             this.Name = "frmCadastro";
             this.Text = "Cadastro";
             this.Controls.SetChildIndex(this.txtCodigo, 0);
