@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -165,6 +166,57 @@ namespace Projeto_Pratica
                 {
                     DisablePasteInTextBoxes(control.Controls);
                 }
+            }
+        }
+
+        // Tratamento de erros usado por todos os cadastros (antes cada formulário repetia este bloco)
+        public virtual void TratarErro(Exception ex)
+        {
+            MySqlException erroBanco = ex as MySqlException;
+
+            if (erroBanco == null)
+            {
+                MessageBox.Show("Ocorreu um erro inesperado: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            switch (erroBanco.Number)
+            {
+                case 1062: // Entrada duplicada
+                    MessageBox.Show(
+                        "Não foi possível salvar o item.\n\nJá existe um item salvo com estes dados.",
+                        "Erro: Item duplicado",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
+                    break;
+
+                case 1451: // Entrada interligada
+                    MessageBox.Show(
+                        "Não foi possível excluir o item.\n\nEle está interligado a outro item existente.",
+                        "Erro: Item em uso",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
+                    break;
+
+                case 1264: // Valor fora do limite
+                    MessageBox.Show(
+                        "Não foi possível salvar o item.\n\nUm ou mais valores informados excedem o limite suportado pelo banco de dados.",
+                        "Erro: Valor muito grande",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
+                    break;
+
+                default: // Outros erros de banco de dados
+                    MessageBox.Show(
+                        "Não foi possível concluir a operação. Verifique os dados e tente novamente.\n\nDetalhes técnicos: " + erroBanco.Message,
+                        "Erro no Banco de Dados",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
+                    break;
             }
         }
 

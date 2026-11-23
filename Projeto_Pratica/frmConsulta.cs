@@ -55,48 +55,6 @@ namespace Projeto_Pratica
         }
 
 
-        private void btnIncluir_Click(object sender, EventArgs e)
-        {
-            Incluir();
-        }
-
-
-        private void btnAlterar_Click(object sender, EventArgs e)
-        {
-            if (listV.SelectedItems.Count == 0)
-            {
-                MessageBox.Show(
-                    "Nenhum item selecionado. Selecione um registro para alterar.",
-                    "Atenção",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning
-                );
-                return;
-            }
-
-            Alterar();
-        }
-
-        private void btnExcluir_Click(object sender, EventArgs e)
-        {
-            if (listV.SelectedItems.Count == 0)
-            {
-                MessageBox.Show(
-                    "Nenhum item selecionado. Selecione um registro para excluir.",
-                    "Atenção",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning
-                );
-                return;
-            }
-
-            Excluir();
-        }
-        private void btnLimparPesquisa_Click(object sender, EventArgs e)
-        {
-            LimparPesquisa();
-        }
-
         public virtual void CarregaLV()
         {
 
@@ -106,6 +64,23 @@ namespace Projeto_Pratica
 
         }
 
+        // Verifica se há um item selecionado antes de alterar/excluir
+        protected bool ItemSelecionado(string acao)
+        {
+            if (listV.SelectedItems.Count == 0)
+            {
+                MessageBox.Show(
+                    "Nenhum item selecionado. Selecione um registro para " + acao + ".",
+                    "Atenção",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return false;
+            }
+
+            return true;
+        }
+
         private void btnIncluir_Click_1(object sender, EventArgs e)
         {
             Incluir();
@@ -113,34 +88,14 @@ namespace Projeto_Pratica
 
         private void btnAlterar_Click_1(object sender, EventArgs e)
         {
-            if (listV.SelectedItems.Count == 0)
-            {
-                MessageBox.Show(
-                    "Nenhum item selecionado. Selecione um registro para alterar.",
-                    "Atenção",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning
-                );
-                return;
-            }
-
-            Alterar();
+            if (ItemSelecionado("alterar"))
+                Alterar();
         }
 
         private void btnExcluir_Click_1(object sender, EventArgs e)
         {
-            if (listV.SelectedItems.Count == 0)
-            {
-                MessageBox.Show(
-                    "Nenhum item selecionado. Selecione um registro para excluir.",
-                    "Atenção",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning
-                );
-                return;
-            }
-
-            Excluir();
+            if (ItemSelecionado("excluir"))
+                Excluir();
         }
 
         private void btnPesquisar_Click_1(object sender, EventArgs e)

@@ -177,6 +177,7 @@
             this.txtPorcentagemLucro.TabIndex = 144;
             this.txtPorcentagemLucro.Text = "0";
             this.txtPorcentagemLucro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPorcentagemLucro.Leave += new System.EventHandler(this.txtPorcentagemLucro_Leave);
             // 
             // txtValorCompraAnterior
             // 
@@ -202,6 +203,7 @@
             this.txtValorVenda.TabIndex = 145;
             this.txtValorVenda.Text = "0";
             this.txtValorVenda.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtValorVenda.Leave += new System.EventHandler(this.txtValorVenda_Leave);
             // 
             // lblValorCompra
             // 
@@ -233,6 +235,7 @@
             this.txtValorCompra.TabIndex = 143;
             this.txtValorCompra.Text = "0";
             this.txtValorCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtValorCompra.Leave += new System.EventHandler(this.txtValorCompra_Leave);
             // 
             // txtEstoque
             // 
@@ -256,6 +259,7 @@
             this.btnPesquisarUnidadeMedida.TabIndex = 142;
             this.btnPesquisarUnidadeMedida.Text = "Pesquisar";
             this.btnPesquisarUnidadeMedida.UseVisualStyleBackColor = true;
+            this.btnPesquisarUnidadeMedida.Click += new System.EventHandler(this.btnPesquisarUnidadeMedida_Click);
             // 
             // txtUnidadeMedida
             // 
@@ -286,6 +290,7 @@
             this.btnPesquisarMarca.TabIndex = 138;
             this.btnPesquisarMarca.Text = "Pesquisar";
             this.btnPesquisarMarca.UseVisualStyleBackColor = true;
+            this.btnPesquisarMarca.Click += new System.EventHandler(this.btnPesquisarMarca_Click);
             // 
             // txtMarca
             // 
@@ -316,6 +321,7 @@
             this.btnPesquisarCategoria.TabIndex = 140;
             this.btnPesquisarCategoria.Text = "Pesquisar";
             this.btnPesquisarCategoria.UseVisualStyleBackColor = true;
+            this.btnPesquisarCategoria.Click += new System.EventHandler(this.btnPesquisarCategoria_Click);
             // 
             // txtCategoria
             // 
@@ -417,6 +423,7 @@
             this.btnRemoverFornecedor.TabIndex = 165;
             this.btnRemoverFornecedor.Text = "Remover";
             this.btnRemoverFornecedor.UseVisualStyleBackColor = true;
+            this.btnRemoverFornecedor.Click += new System.EventHandler(this.btnRemoverFornecedor_Click);
             // 
             // btnAdicionarFornecedor
             // 
@@ -426,6 +433,7 @@
             this.btnAdicionarFornecedor.TabIndex = 164;
             this.btnAdicionarFornecedor.Text = "Adicionar ";
             this.btnAdicionarFornecedor.UseVisualStyleBackColor = true;
+            this.btnAdicionarFornecedor.Click += new System.EventHandler(this.btnAdicionarFornecedor_Click);
             // 
             // listVFornecedores
             // 
@@ -467,6 +475,7 @@
             this.btnPesquisarFornecedor.TabIndex = 163;
             this.btnPesquisarFornecedor.Text = "Pesquisar";
             this.btnPesquisarFornecedor.UseVisualStyleBackColor = true;
+            this.btnPesquisarFornecedor.Click += new System.EventHandler(this.btnPesquisarFornecedor_Click);
             // 
             // txtFornecedor
             // 

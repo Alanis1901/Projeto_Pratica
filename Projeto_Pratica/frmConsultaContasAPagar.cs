@@ -53,7 +53,69 @@ namespace Projeto_Pratica
 
         private void btnDarBaixa_Click(object sender, EventArgs e)
         {
+            if (!ItemSelecionado("dar baixa"))
+                return;
 
+            ListViewItem linhaSelecionada = listV.SelectedItems[0];
+            contasAPagar contaSelecionada = (contasAPagar)linhaSelecionada.Tag;
+
+            if (!contaSelecionada.Ativo)
+            {
+                MessageBox.Show(
+                    "Esta conta está cancelada e não pode ser baixada.",
+                    "Ação Interrompida",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+
+            aController_contasAPagar.CarregaObj(contaSelecionada);
+
+            if (contaSelecionada.Situacao == 1)
+            {
+                MessageBox.Show(
+                    "Esta conta já foi paga.",
+                    "Ação Interrompida",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+                return;
+            }
+
+            if (contaSelecionada.NumeroParcela > 1)
+            {
+                bool parcelaAnteriorPendente = listaCompletaContas.Any(c =>
+                    c.ModeloCompra == contaSelecionada.ModeloCompra &&
+                    c.SerieCompra == contaSelecionada.SerieCompra &&
+                    c.NumeroNotaCompra == contaSelecionada.NumeroNotaCompra &&
+                    c.OFornecedor.Id == contaSelecionada.OFornecedor.Id &&
+                    c.NumeroParcela < contaSelecionada.NumeroParcela &&
+                    c.Situacao == 0 &&
+                    c.Ativo == true
+                );
+
+                if (parcelaAnteriorPendente)
+                {
+                    MessageBox.Show(
+                        "Não é possível dar baixa nesta parcela.\n\nExistem parcelas anteriores para esta mesma nota de compra que ainda estão em aberto.",
+                        "Pagamento Fora de Ordem",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning
+                    );
+                    return;
+                }
+            }
+
+            string aux = oFrmCadastroContasAPagar.btnSave.Text;
+            oFrmCadastroContasAPagar.btnSave.Text = "Dar Baixa";
+            oFrmCadastroContasAPagar.ConhecaObj(contaSelecionada, aController_contasAPagar);
+            oFrmCadastroContasAPagar.Carregatxt();
+            oFrmCadastroContasAPagar.Desbloqueiatxt();
+            oFrmCadastroContasAPagar.ShowDialog();
+
+            oFrmCadastroContasAPagar.btnSave.Text = aux;
+            CarregaLV();
         }
 
 

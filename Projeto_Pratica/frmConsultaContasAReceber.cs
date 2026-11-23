@@ -36,16 +36,8 @@ namespace Projeto_Pratica
 
         public override void Incluir()
         {
-            if (listV.SelectedItems.Count == 0)
-            {
-                MessageBox.Show(
-                    "Nenhum item selecionado. Selecione um registro para dar baixa.",
-                    "Atenção",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning
-                );
+            if (!ItemSelecionado("dar baixa"))
                 return;
-            }
 
             ListViewItem linhaSelecionada = listV.SelectedItems[0];
             contasAReceber contaSelecionada = (contasAReceber)linhaSelecionada.Tag;

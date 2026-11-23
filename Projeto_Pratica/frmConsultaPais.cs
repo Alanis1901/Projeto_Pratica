@@ -160,14 +160,5 @@ namespace Projeto_Pratica
             base.Sair();
         }
 
-        private void listV_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPesquisar_Click(object sender, EventArgs e)
-        {
-            Pesquisar();
-        }
     }
 }

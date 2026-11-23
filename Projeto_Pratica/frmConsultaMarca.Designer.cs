@@ -37,6 +37,7 @@
             this.listV.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clmNome,
             this.clmAtivo});
+            this.listV.SelectedIndexChanged += new System.EventHandler(this.listV_SelectedIndexChanged);
             // 
             // clmNome
             // 
@@ -58,7 +59,7 @@
             this.MinimumSize = new System.Drawing.Size(0, 0);
             this.Name = "frmConsultaMarca";
             this.Text = "Consulta de Marca";
-            this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.frmConsultaMarca_MouseDoubleClick);
+            this.listV.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.frmConsultaMarca_MouseDoubleClick);
             this.ResumeLayout(false);
             this.PerformLayout();
 

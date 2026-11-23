@@ -54,6 +54,8 @@
             this.clmTelefone,
             this.clmAtivo});
             this.listV.Size = new System.Drawing.Size(1320, 557);
+            this.listV.SelectedIndexChanged += new System.EventHandler(this.listV_SelectedIndexChanged);
+            this.listV.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.frmConsultaFornecedor_MouseDoubleClick);
             // 
             // btnExcluir
             // 

@@ -132,6 +132,7 @@
             // 
             this.txtCodigo.Location = new System.Drawing.Point(12, 35);
             this.txtCodigo.ShortcutsEnabled = false;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.Cabecalho_TextChanged);
             // 
             // btnSair
             // 
@@ -146,6 +147,7 @@
             this.btnPesquisarCliente.TabIndex = 146;
             this.btnPesquisarCliente.Text = "Pesquisar";
             this.btnPesquisarCliente.UseVisualStyleBackColor = true;
+            this.btnPesquisarCliente.Click += new System.EventHandler(this.btnPesquisarCliente_Click);
             // 
             // btnPesquisarFuncionario
             // 
@@ -205,6 +207,7 @@
             this.txtNumDaNota.Size = new System.Drawing.Size(129, 20);
             this.txtNumDaNota.TabIndex = 152;
             this.txtNumDaNota.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtNumDaNota.TextChanged += new System.EventHandler(this.Cabecalho_TextChanged);
             // 
             // txtSerie
             // 
@@ -216,6 +219,7 @@
             this.txtSerie.Size = new System.Drawing.Size(46, 20);
             this.txtSerie.TabIndex = 157;
             this.txtSerie.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtSerie.TextChanged += new System.EventHandler(this.Cabecalho_TextChanged);
             // 
             // lblCliente
             // 
@@ -262,6 +266,7 @@
             this.dtpDataEmissao.Name = "dtpDataEmissao";
             this.dtpDataEmissao.Size = new System.Drawing.Size(115, 20);
             this.dtpDataEmissao.TabIndex = 158;
+            this.dtpDataEmissao.ValueChanged += new System.EventHandler(this.dtpDataEmissao_ValueChanged);
             // 
             // lblDataEmissao
             // 
@@ -332,6 +337,7 @@
             this.btnPesquisarProduto.TabIndex = 176;
             this.btnPesquisarProduto.Text = "Pesquisar";
             this.btnPesquisarProduto.UseVisualStyleBackColor = true;
+            this.btnPesquisarProduto.Click += new System.EventHandler(this.btnPesquisarProduto_Click);
             // 
             // btnLimparListaProduto
             // 
@@ -341,6 +347,7 @@
             this.btnLimparListaProduto.TabIndex = 182;
             this.btnLimparListaProduto.Text = "Limpar Lista";
             this.btnLimparListaProduto.UseVisualStyleBackColor = true;
+            this.btnLimparListaProduto.Click += new System.EventHandler(this.btnLimparListaProduto_Click);
             // 
             // btnRemoverProduto
             // 
@@ -350,6 +357,7 @@
             this.btnRemoverProduto.TabIndex = 181;
             this.btnRemoverProduto.Text = "Remover";
             this.btnRemoverProduto.UseVisualStyleBackColor = true;
+            this.btnRemoverProduto.Click += new System.EventHandler(this.btnRemoverProduto_Click);
             // 
             // btnEditarProduto
             // 
@@ -359,6 +367,7 @@
             this.btnEditarProduto.TabIndex = 180;
             this.btnEditarProduto.Text = "Editar";
             this.btnEditarProduto.UseVisualStyleBackColor = true;
+            this.btnEditarProduto.Click += new System.EventHandler(this.btnEditarProduto_Click);
             // 
             // btnAdicionarProduto
             // 
@@ -368,6 +377,7 @@
             this.btnAdicionarProduto.TabIndex = 179;
             this.btnAdicionarProduto.Text = "Adicionar ";
             this.btnAdicionarProduto.UseVisualStyleBackColor = true;
+            this.btnAdicionarProduto.Click += new System.EventHandler(this.btnAdicionarProduto_Click);
             // 
             // txtUnidadeDeMedida
             // 
@@ -397,6 +407,7 @@
             this.txtValorUnitario.Size = new System.Drawing.Size(88, 20);
             this.txtValorUnitario.TabIndex = 178;
             this.txtValorUnitario.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtValorUnitario.Leave += new System.EventHandler(this.txtValorUnitario_Leave);
             // 
             // txtQuantidade
             // 
@@ -406,6 +417,7 @@
             this.txtQuantidade.Size = new System.Drawing.Size(74, 20);
             this.txtQuantidade.TabIndex = 177;
             this.txtQuantidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtQuantidade.Leave += new System.EventHandler(this.txtQuantidade_Leave);
             // 
             // txtProduto
             // 
@@ -500,6 +512,7 @@
             this.btnPesquisarCondicaoDePagamento.TabIndex = 193;
             this.btnPesquisarCondicaoDePagamento.Text = "Pesquisar";
             this.btnPesquisarCondicaoDePagamento.UseVisualStyleBackColor = true;
+            this.btnPesquisarCondicaoDePagamento.Click += new System.EventHandler(this.btnPesquisarCondicaoDePagamento_Click);
             // 
             // btnLimparParcelas
             // 
@@ -509,6 +522,7 @@
             this.btnLimparParcelas.TabIndex = 195;
             this.btnLimparParcelas.Text = "Limpar Parcelas";
             this.btnLimparParcelas.UseVisualStyleBackColor = true;
+            this.btnLimparParcelas.Click += new System.EventHandler(this.btnLimparParcelas_Click);
             // 
             // btnGerarParcelas
             // 
@@ -518,6 +532,7 @@
             this.btnGerarParcelas.TabIndex = 194;
             this.btnGerarParcelas.Text = "Gerar Parcelas";
             this.btnGerarParcelas.UseVisualStyleBackColor = true;
+            this.btnGerarParcelas.Click += new System.EventHandler(this.btnGerarParcelas_Click);
             // 
             // txtCondicaoDePagamento
             // 

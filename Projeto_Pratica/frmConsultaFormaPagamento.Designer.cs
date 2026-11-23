@@ -38,6 +38,7 @@
             this.clmDescricao,
             this.clmAtivo});
             this.listV.Size = new System.Drawing.Size(636, 384);
+            this.listV.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.frmConsultaFormaPagamento_MouseDoubleClick);
             // 
             // btnExcluir
             // 

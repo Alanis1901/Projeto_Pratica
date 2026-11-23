@@ -95,6 +95,7 @@
             this.comboBoxFiltroStatus.Name = "comboBoxFiltroStatus";
             this.comboBoxFiltroStatus.Size = new System.Drawing.Size(252, 21);
             this.comboBoxFiltroStatus.TabIndex = 15;
+            this.comboBoxFiltroStatus.SelectedIndexChanged += new System.EventHandler(this.comboBoxFiltroStatus_SelectedIndexChanged);
             // 
             // lblFiltros
             // 

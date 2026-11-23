@@ -39,8 +39,8 @@
             this.clmNome,
             this.clmPais,
             this.clmAtivo});
-            this.listV.DoubleClick += new System.EventHandler(this.listV_SelectedIndexChanged);
             this.listV.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.frmConsultaEstado_MouseDoubleClick);
+            this.listV.SelectedIndexChanged += new System.EventHandler(this.listV_SelectedIndexChanged);
             // 
             // clmNome
             // 

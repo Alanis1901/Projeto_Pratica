@@ -40,6 +40,8 @@
             this.clmSigla,
             this.clmAtivo});
             this.listV.Size = new System.Drawing.Size(1320, 555);
+            this.listV.SelectedIndexChanged += new System.EventHandler(this.listV_SelectedIndexChanged);
+            this.listV.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.frmConsultaUnidade_medida_MouseDoubleClick);
             // 
             // btnExcluir
             // 

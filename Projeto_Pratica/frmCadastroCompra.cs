@@ -203,42 +203,9 @@ namespace Projeto_Pratica
                     MessageBox.Show("Compra salva com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     base.Salvar();
                 }
-                catch (MySqlException ex)
-                {
-                    switch (ex.Number)
-                    {
-                        case 1062:
-                            MessageBox.Show(
-                                "Não foi possível salvar o item.\n\nJá existe um item salvo com estes dados.",
-                                "Erro: Item duplicado",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error
-                            );
-                            break;
-
-                        case 1264:
-                            MessageBox.Show(
-                                "Não foi possível salvar o item.\n\nUm ou mais valores informados excedem o limite suportado pelo banco de dados.",
-                                "Erro: Valor muito grande",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error
-                            );
-                            break;
-
-                        default:
-                            MessageBox.Show(
-                                "Não foi possível concluir a operação. Verifique os dados e tente novamente.\n\nDetalhes técnicos: " + ex.Message,
-                                "Erro no Banco de Dados",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error
-                            );
-                            break;
-                    }
-                    return;
-                }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Ocorreu um erro inesperado: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    TratarErro(ex);
                 }
             }
         }

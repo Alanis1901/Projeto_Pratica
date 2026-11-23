@@ -39,6 +39,7 @@
             this.clmDescricao,
             this.clmQtdParcelas,
             this.clmAtivo});
+            this.listV.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.frmConsultaCondicaoPagamento_MouseDoubleClick);
             // 
             // clmDescricao
             // 

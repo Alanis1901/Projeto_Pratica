@@ -38,6 +38,7 @@
             // 
             this.btnPesquisarCidade.Location = new System.Drawing.Point(318, 158);
             this.btnPesquisarCidade.Size = new System.Drawing.Size(87, 25);
+            this.btnPesquisarCidade.Click += new System.EventHandler(this.btnPesquisarCidade_Click);
             // 
             // lblDataCadastro
             // 
@@ -98,6 +99,7 @@
             this.btnPesquisarCondicaoPagamento.TabIndex = 196;
             this.btnPesquisarCondicaoPagamento.Text = "Pesquisar";
             this.btnPesquisarCondicaoPagamento.UseVisualStyleBackColor = true;
+            this.btnPesquisarCondicaoPagamento.Click += new System.EventHandler(this.BtnPesquisarCondicaoPagamento_Click);
             // 
             // txtCondicaoPagamento
             // 
@@ -119,6 +121,7 @@
             this.lblCondicaoPagamento.Size = new System.Drawing.Size(131, 13);
             this.lblCondicaoPagamento.TabIndex = 197;
             this.lblCondicaoPagamento.Text = "Condição de Pagamento *";
+            this.comboBoxTipo.SelectedIndexChanged += new System.EventHandler(this.ComboBoxTipo_SelectedIndexChanged);
             // 
             // frmCadastroFornecedor
             // 

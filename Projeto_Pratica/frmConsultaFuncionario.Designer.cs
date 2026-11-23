@@ -47,11 +47,9 @@
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // bntLimparPesquisa
             // 
-            this.bntLimparPesquisa.Click += new System.EventHandler(this.bntLimparPesquisa_Click);
             // 
             // listV
             // 
@@ -73,8 +71,8 @@
             this.clmAtivo});
             this.listV.Location = new System.Drawing.Point(12, 71);
             this.listV.Size = new System.Drawing.Size(1652, 385);
-            this.listV.DoubleClick += new System.EventHandler(this.listV_SelectedIndexChanged);
             this.listV.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.frmConsultaFuncionario_MouseDoubleClick);
+            this.listV.SelectedIndexChanged += new System.EventHandler(this.listV_SelectedIndexChanged);
             // 
             // btnExcluir
             // 

@@ -18,11 +18,6 @@ namespace Projeto_Pratica
             ConfigurarFormularioBase();
         }
 
-        private void frmBase_Load(object sender, EventArgs e)
-        {
-
-        }
-
         public virtual void Sair()
         {
             Close();
@@ -36,14 +31,6 @@ namespace Projeto_Pratica
         public void btnSair_Click(object sender, EventArgs e)
         {
             Sair();
-        }
-
-        public void FrmBase_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Escape)
-            {
-                this.Close();
-            }
         }
 
         public virtual void ConfigurarFormularioBase()

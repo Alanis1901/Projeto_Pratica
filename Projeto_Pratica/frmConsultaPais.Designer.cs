@@ -34,14 +34,13 @@
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // listV
             // 
             this.listV.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clmNome,
             this.clmAtivo});
-            this.listV.SelectedIndexChanged += new System.EventHandler(this.listV_SelectedIndexChanged_1);
+            this.listV.SelectedIndexChanged += new System.EventHandler(this.listV_SelectedIndexChanged);
             this.listV.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.frmConsultaPais_MouseDoubleClick);
             // 
             // clmNome

@@ -56,6 +56,7 @@
             this.clmMotivoCancelamento,
             this.clmDataCancelamento});
             this.listV.Size = new System.Drawing.Size(1437, 550);
+            this.listV.SelectedIndexChanged += new System.EventHandler(this.listV_SelectedIndexChanged);
             // 
             // clmCod
             // 

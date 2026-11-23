@@ -284,6 +284,7 @@
             this.btnRemoverParcela.TabIndex = 118;
             this.btnRemoverParcela.Text = "Remover Parcela";
             this.btnRemoverParcela.UseVisualStyleBackColor = true;
+            this.btnRemoverParcela.Click += new System.EventHandler(this.btnRemoverParcela_Click);
             // 
             // btnEditarParcela
             // 
@@ -294,6 +295,7 @@
             this.btnEditarParcela.TabIndex = 117;
             this.btnEditarParcela.Text = "Editar Parcela";
             this.btnEditarParcela.UseVisualStyleBackColor = true;
+            this.btnEditarParcela.Click += new System.EventHandler(this.btnEditarParcela_Click);
             // 
             // btnAdicionarParcela
             // 
@@ -304,6 +306,7 @@
             this.btnAdicionarParcela.TabIndex = 116;
             this.btnAdicionarParcela.Text = "Adicionar Parcela";
             this.btnAdicionarParcela.UseVisualStyleBackColor = true;
+            this.btnAdicionarParcela.Click += new System.EventHandler(this.btnAdicionarParcela_Click);
             // 
             // btnPesquisarFormaPagamento
             // 
@@ -314,6 +317,7 @@
             this.btnPesquisarFormaPagamento.TabIndex = 115;
             this.btnPesquisarFormaPagamento.Text = "Pesquisar";
             this.btnPesquisarFormaPagamento.UseVisualStyleBackColor = true;
+            this.btnPesquisarFormaPagamento.Click += new System.EventHandler(this.btnPesquisarFormaPagamento_Click);
             // 
             // lblFormaPagamento
             // 

@@ -81,6 +81,7 @@
             this.listV.TabIndex = 5;
             this.listV.UseCompatibleStateImageBehavior = false;
             this.listV.View = System.Windows.Forms.View.Details;
+            this.listV.SelectedIndexChanged += new System.EventHandler(this.ListV_SelectedIndexChanged);
             // 
             // clmCod
             // 

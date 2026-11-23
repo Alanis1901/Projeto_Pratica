@@ -121,6 +121,7 @@
             this.btnPesquisarCliente.TabIndex = 185;
             this.btnPesquisarCliente.Text = "Pesquisar";
             this.btnPesquisarCliente.UseVisualStyleBackColor = true;
+            this.btnPesquisarCliente.Click += new System.EventHandler(this.btnPesquisarCliente_Click);
             // 
             // dtpDataEmissao
             // 
@@ -130,6 +131,7 @@
             this.dtpDataEmissao.Name = "dtpDataEmissao";
             this.dtpDataEmissao.Size = new System.Drawing.Size(115, 20);
             this.dtpDataEmissao.TabIndex = 186;
+            this.dtpDataEmissao.ValueChanged += new System.EventHandler(this.DtpDataEmissao_ValueChanged);
             // 
             // dtpDataVencimento
             // 
@@ -232,6 +234,7 @@
             this.dtpDataPagamento.ShowCheckBox = true;
             this.dtpDataPagamento.Size = new System.Drawing.Size(135, 20);
             this.dtpDataPagamento.TabIndex = 210;
+            this.dtpDataPagamento.ValueChanged += new System.EventHandler(this.RecalcularValorPago);
             // 
             // btnPesquisarFormaPagamento
             // 
@@ -241,6 +244,7 @@
             this.btnPesquisarFormaPagamento.TabIndex = 209;
             this.btnPesquisarFormaPagamento.Text = "Pesquisar";
             this.btnPesquisarFormaPagamento.UseVisualStyleBackColor = true;
+            this.btnPesquisarFormaPagamento.Click += new System.EventHandler(this.btnPesquisarFormaPagamento_Click);
             // 
             // txtCodFormaPagamento
             // 
@@ -325,6 +329,7 @@
             this.txtDescontoReais.Size = new System.Drawing.Size(82, 20);
             this.txtDescontoReais.TabIndex = 208;
             this.txtDescontoReais.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDescontoReais.Leave += new System.EventHandler(this.AtualizarValorPagoFinal_Handler);
             // 
             // txtDesconto
             // 
@@ -336,6 +341,7 @@
             this.txtDesconto.Size = new System.Drawing.Size(82, 20);
             this.txtDesconto.TabIndex = 205;
             this.txtDesconto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDesconto.Leave += new System.EventHandler(this.AtualizarValorPagoFinal_Handler);
             // 
             // txtMultaReais
             // 
@@ -347,6 +353,7 @@
             this.txtMultaReais.Size = new System.Drawing.Size(82, 20);
             this.txtMultaReais.TabIndex = 206;
             this.txtMultaReais.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMultaReais.Leave += new System.EventHandler(this.AtualizarValorPagoFinal_Handler);
             // 
             // txtJurosReais
             // 
@@ -358,6 +365,7 @@
             this.txtJurosReais.Size = new System.Drawing.Size(82, 20);
             this.txtJurosReais.TabIndex = 207;
             this.txtJurosReais.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtJurosReais.Leave += new System.EventHandler(this.AtualizarValorPagoFinal_Handler);
             // 
             // txtMulta
             // 
@@ -369,6 +377,7 @@
             this.txtMulta.Size = new System.Drawing.Size(82, 20);
             this.txtMulta.TabIndex = 203;
             this.txtMulta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMulta.Leave += new System.EventHandler(this.AtualizarValorPagoFinal_Handler);
             // 
             // txtJuros
             // 
@@ -380,6 +389,7 @@
             this.txtJuros.Size = new System.Drawing.Size(82, 20);
             this.txtJuros.TabIndex = 204;
             this.txtJuros.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtJuros.Leave += new System.EventHandler(this.AtualizarValorPagoFinal_Handler);
             // 
             // lblFormaPagamento
             // 
@@ -417,6 +427,7 @@
             this.txtValorParcela.Size = new System.Drawing.Size(189, 20);
             this.txtValorParcela.TabIndex = 202;
             this.txtValorParcela.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtValorParcela.Leave += new System.EventHandler(this.AtualizarValorPagoFinal_Handler);
             // 
             // lblValorFinal
             // 

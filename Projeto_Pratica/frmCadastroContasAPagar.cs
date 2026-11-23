@@ -231,29 +231,15 @@ namespace Projeto_Pratica
                             MessageBoxIcon.Error
                         );
                         break;
-                    case 1264: // Out of range value
-                        MessageBox.Show(
-                            "Não foi possível salvar o item.\n\nUm ou mais valores informados excedem o limite suportado pelo banco de dados.",
-                            "Erro: Valor muito grande",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Error
-                        );
-                        break;
                     default:
-                        MessageBox.Show(
-                            "Não foi possível concluir a operação. Verifique os dados e tente novamente.\n\nDetalhes técnicos: " + ex.Message,
-                            "Erro no Banco de Dados",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Error
-                        );
+                        TratarErro(ex);
                         break;
                 }
                 return;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocorreu um erro inesperado: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                TratarErro(ex);
             }
         }
 
@@ -573,11 +559,6 @@ namespace Projeto_Pratica
                 txtCodFormaPagamento.Text = forma.Id.ToString();
                 txtFormaPagamento.Text = forma.Descricao;
             }
-        }
-
-        private void dtpDataPagamento_ValueChanged(object sender, EventArgs e)
-        {
-            RecalcularValorPago(sender, e);
         }
 
         private void RecalcularValorPago(object sender, EventArgs e)

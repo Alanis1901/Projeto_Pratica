@@ -25,11 +25,6 @@ namespace Projeto_Pratica
             HabilitarCampos(false);
         }
 
-        private void btnPesquisarCondicaoPagamento_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void CheckBoxLimiteDeCredito_CheckedChanged(object sender, EventArgs e)
         {
             txtLimiteDeCredito.Enabled = checkBoxLimiteDeCredito.Checked;
@@ -152,52 +147,9 @@ namespace Projeto_Pratica
                     base.Salvar();
                 }
             }
-            catch (MySqlException ex)
-            {
-                switch (ex.Number)
-                {
-                    case 1062:
-                        MessageBox.Show(
-                            "Não foi possível salvar o item.\n\nJá existe um item salvo com estes dados.",
-                            "Erro: Item duplicado",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Error
-                        );
-                        break;
-
-                    case 1451:
-                        MessageBox.Show(
-                            "Não foi possível excluir o item.\n\nEle está interligado a outro item existente.",
-                            "Erro: Item em uso",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Error
-                        );
-                        break;
-
-                    case 1264:
-                        MessageBox.Show(
-                            "Não foi possível salvar o item.\n\nUm ou mais valores informados excedem o limite suportado pelo banco de dados.",
-                            "Erro: Valor muito grande",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Error
-                        );
-                        break;
-
-                    default:
-                        MessageBox.Show(
-                            "Não foi possível concluir a operação. Verifique os dados e tente novamente.\n\nDetalhes técnicos: " + ex.Message,
-                            "Erro no Banco de Dados",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Error
-                        );
-                        break;
-                }
-                return;
-            }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocorreu um erro inesperado: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                TratarErro(ex);
             }
         }
 
@@ -316,6 +268,8 @@ namespace Projeto_Pratica
 
         private void ComboBoxTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (comboBoxTipo.SelectedIndex == -1) return; // Limpartxt volta para -1, nada a fazer
+
             txtCpfCnpj.Clear();
             comboBoxGenero.SelectedIndex = -1;
 

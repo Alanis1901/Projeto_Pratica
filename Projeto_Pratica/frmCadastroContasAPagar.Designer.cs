@@ -465,6 +465,7 @@
             this.btnPesquisarFormaPagamento.TabIndex = 166;
             this.btnPesquisarFormaPagamento.Text = "Pesquisar";
             this.btnPesquisarFormaPagamento.UseVisualStyleBackColor = true;
+            this.btnPesquisarFormaPagamento.Click += new System.EventHandler(this.btnPesquisarFormaPagamento_Click);
             // 
             // txtCodFormaPagamento
             // 

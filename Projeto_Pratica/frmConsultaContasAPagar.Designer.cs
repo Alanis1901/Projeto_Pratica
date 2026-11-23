@@ -144,6 +144,7 @@
             this.comboBoxFiltroStatus.Name = "comboBoxFiltroStatus";
             this.comboBoxFiltroStatus.Size = new System.Drawing.Size(252, 21);
             this.comboBoxFiltroStatus.TabIndex = 13;
+            this.comboBoxFiltroStatus.SelectedIndexChanged += new System.EventHandler(this.comboBoxFiltroStatus_SelectedIndexChanged);
             // 
             // lblFiltros
             // 
@@ -162,6 +163,7 @@
             this.btnDarBaixa.TabIndex = 14;
             this.btnDarBaixa.Text = "Dar Baixa";
             this.btnDarBaixa.UseVisualStyleBackColor = true;
+            this.btnDarBaixa.Click += new System.EventHandler(this.btnDarBaixa_Click);
             // 
             // frmConsultaContasAPagar
             // 
