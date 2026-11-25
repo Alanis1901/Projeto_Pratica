@@ -15,6 +15,8 @@ namespace Projeto_Pratica
         public Controller_contasAPagar()
         {
             aDao_contasAPagar = new Dao_contasAPagar();
+            aController_fornecedor = new Controller_fornecedor();
+            aController_formaPagamento = new Controller_formaPagamento();
         }
 
         public Controller_fornecedor AController_fornecedor

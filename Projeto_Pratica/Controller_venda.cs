@@ -22,6 +22,7 @@ namespace Projeto_Pratica
             aController_funcionario = new Controller_funcionario();
             aController_condicaoPagamento = new Controller_condicaoPagamento();
             aController_produto = new Controller_produto();
+            aController_contasAReceber = new Controller_contasAReceber();
         }
 
         public override string Salvar(object obj)

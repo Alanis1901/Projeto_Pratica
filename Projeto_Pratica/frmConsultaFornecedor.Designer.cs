@@ -126,7 +126,7 @@
             // frmConsultaFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(1344, 689);
+            this.ClientSize = new System.Drawing.Size(1347, 689);
             this.Name = "frmConsultaFornecedor";
             this.Text = "Consulta de Fornecedor";
             this.ResumeLayout(false);

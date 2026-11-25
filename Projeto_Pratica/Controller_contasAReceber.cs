@@ -15,6 +15,8 @@ namespace Projeto_Pratica
         public Controller_contasAReceber()
         {
             aDao_contasAReceber = new Dao_contasAReceber();
+            aController_cliente = new Controller_cliente();
+            aController_formaPagamento = new Controller_formaPagamento();
         }
 
         public Controller_cliente AController_cliente
